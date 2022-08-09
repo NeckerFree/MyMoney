@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :entity, foreign_key: 'author_id'
-  has_many :group
-  devise :database_authenticatable, :registerable,
+ devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable, :confirmable
+ has_many :entities, foreign_key: 'author_id'
+ has_many :group
 end
