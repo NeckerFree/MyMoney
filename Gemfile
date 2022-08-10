@@ -52,6 +52,7 @@ gem 'cancancan'
 gem 'devise'
 gem 'letter_opener'
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'bootstrap', '~> 5.1.3'
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
