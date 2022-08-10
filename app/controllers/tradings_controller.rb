@@ -1,6 +1,6 @@
-class TransactionsController < ApplicationController
+class TradingsController < ApplicationController
   def index
-    @transactions=Transaction.all
+    @tradings=Trading.all
   end
 
   def new
