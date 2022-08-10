@@ -1,0 +1,12 @@
+<div class="transaction-item">
+    <div class="transaction-left">
+        <img class="image-transaction" src="<%= transaction.icon%>" alt="icon transaction"/>
+    </div>
+    <div class="transaction-center">
+        <p><%= transaction.name %> </p>
+        <label><%= transaction.created_at %> </label>
+    </div>
+    <div class="transaction-right">
+        <label class="description"><%= transaction.amount %> </label>
+    </div>
+</div>

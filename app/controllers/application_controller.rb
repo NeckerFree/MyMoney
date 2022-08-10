@@ -10,4 +10,10 @@ class ApplicationController < ActionController::Base
   def current_user
     @current_user = User.find(session[:user_id]) if session[:user_id]
   end
+
+  protected
+
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name])
+  end
 end
