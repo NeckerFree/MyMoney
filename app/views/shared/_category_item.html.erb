@@ -1,0 +1,13 @@
+<div class="category-item">
+    <div class="category-left">
+    <img class="image-category" src="<%= image_path("/#{category.icon.split('/').last}".gsub("\\", "/").gsub("/app/assets/images","/assets")) %>" alt="icon category"/>
+    </div>
+    <div class="category-center">
+        <p><%= category.name %> </p>
+        <label><%=category.created_at.strftime('%d %b %Y')%> </label> 
+    </div>
+    <div class="category-right">
+        <label><%=category.total_tradings %> </label>
+    </div>
+</div>
+

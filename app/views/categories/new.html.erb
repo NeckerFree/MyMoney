@@ -1,2 +1,40 @@
-<h1>Categories#new</h1>
-<p>Find me in app/views/categories/new.html.erb</p>
+<%= form_with(model: Category.new) do |f| %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autocomplete: "name", required: true %>
+  </div>
+
+ 
+<% @images.each do |image| %>
+        <%=image_tag asset_path("#{image.split('/').last}")%>
+    <% end %>
+  <div class="actions">
+    <%= f.submit "Save", class: "btn btn-primary" %>
+  </div>
+<% end %>
+<!--
+<select class="image-picker show-labels show-html">
+    <option data-img-src="http://placekitten.com/220/200" value="1">Cute Kitten 1</option>
+    <option data-img-src="http://placekitten.com/180/200" value="2">Cute Kitten 2</option>
+    <option data-img-src="http://placekitten.com/130/200" value="3">Cute Kitten 3</option>
+    <option data-img-src="http://placekitten.com/270/200" value="4">Cute Kitten 4</option>
+</select>
+<select>
+    <option value="volvo" style="background-image:url(images/volvo.png);">Volvo</option>
+    <option value="saab"  style="background-image:url(images/saab.png);">Saab</option>
+    <option value="honda" style="background-image:url(images/honda.png);">Honda</option>
+    <option value="audi"  style="background-image:url(images/audi.png);">Audi</option>
+</select>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Right-aligned menu
+  </button>
+  <div class="dropdown-menu dropdown-menu-right">
+    <button class="dropdown-item" type="button">Action</button>
+    <button class="dropdown-item" type="button">Another action</button>
+    <button class="dropdown-item" type="button">Something else here</button>
+  </div>
+</div>
+-->

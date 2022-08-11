@@ -1,6 +1,6 @@
 <div class="splash">
-  <%if current_user%>
-    <h2>Hi, <%= current_user.name %>!</h2>
+  <%if @current_user%>
+    <h2>Hi, <%= @current_user.name %>!</h2>
   <% end %>
     <img class="image-category" src="<%= image_path("icons8-market-64.png") %>" alt="icon app"/>
   <h1>My Money</h1>
