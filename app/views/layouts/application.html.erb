@@ -14,9 +14,14 @@
 
   <body>
     <%# <%= render "shared/header" %> 
-    <div class="container">
-    <%= yield %>
-           <p class="notice"><%= notice %></p>
-           <p class="alert"><%= alert %></p></div>
-    </body>
+    <div class="container ">
+      <div class="center-container">
+        <div class="form-container">
+          <%= yield %>
+          <p class="notice"><%= notice %></p>
+          <p class="alert"><%= alert %></p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>

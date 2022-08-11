@@ -13,6 +13,7 @@
 //= link Sports/icons8-rollerblade-50.png
 //= link Sports/icons8-soccer-ball-50.png
 //= link Sports/icons8-tennis-ball-50.png
+//= link icons8-market-64.png
 
 
 

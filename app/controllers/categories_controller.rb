@@ -1,4 +1,5 @@
 class CategoriesController < ApplicationController
+  before_action :authenticate_user!
   def index
     puts session[:current_user]
     @categories = Category.where(author_id: current_user.id)
@@ -9,7 +10,7 @@ class CategoriesController < ApplicationController
   end
 
   def create
-    @category = category.new(category_params)
+    @category = Category.new(category_params)
     @category.author_id = current_user.id
 
     if @category.save

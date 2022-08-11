@@ -1,4 +1,5 @@
 class TradingsController < ApplicationController
+  before_action :authenticate_user!
   def index
     @tradings = Trading.all
   end
