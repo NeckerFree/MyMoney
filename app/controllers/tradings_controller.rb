@@ -1,15 +1,14 @@
 class TradingsController < ApplicationController
   def index
-    @tradings=Trading.all
+    @tradings = Trading.all
   end
 
-  def new
-  end
+  def new; end
 
   def create
-    @trading =Tnradings.new(trading_params)
+    @trading = Tnradings.new(trading_params)
     @trading.author_id = current_user.id
-   if @trading.save
+    if @trading.save
       flash[:notice] = 'transaction was successfully created.'
     else
       flash[:error] = 'Error creating transaction'
@@ -17,16 +16,16 @@ class TradingsController < ApplicationController
   end
 
   def update
-    respond_to do |format|
+    respond_to do |_format|
       if @trading.update(trading_params)
         flash[:notice] = 'transaction was successfully created.'
       else
         flash[:error] = 'Error creating transaction'
-    end
+      end
     end
   end
 
-   def destroy
+  def destroy
     if @trading.destroy
       flash[:notice] = 'transaction was successfully created.'
     else

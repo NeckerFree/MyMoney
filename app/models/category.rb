@@ -4,9 +4,8 @@ class Category < ApplicationRecord
   has_many :tradings, through: :trading_categories, dependent: :destroy
   validates :name, presence: true, length: { in: 3..100 }
   validates :icon, presence: true, length: { in: 5..300 }
- 
+
   def total_tradings
     tradings.sum(:amount)
   end
-
 end
