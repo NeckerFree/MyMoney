@@ -1,0 +1,12 @@
+<div class="trading-item">
+    <div class="trading-left">
+        <%= image_tag asset_path("#{trading.icon.split('/').last}") %>
+    </div>
+    <div class="trading-center">
+        <p><%= trading.name %> </p>
+        <label><%= trading.created_at %> </label>
+    </div>
+    <div class="trading-right">
+        <label class="description"><%= trading.amount %> </label>
+    </div>
+</div>

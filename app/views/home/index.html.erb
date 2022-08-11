@@ -1,0 +1,16 @@
+<div class="splash">
+  <%if current_user%>
+    <h2>Hi, <%= current_user.name %>!</h2>
+  <% end %>
+    <img class="image-category" src="<%= image_path("icons8-market-64.png") %>" alt="icon app"/>
+  <h1>My Money</h1>
+  <div class="splash_buttons">
+    <%if user_signed_in?%>
+    <%= link_to "Categories", categories_path, class:"app_button standard_button" %>
+    <%= button_to "Sign Out", destroy_user_session_path, class: "sign-btn", method: :delete %>
+    <% else %>
+      <%= link_to "Sign In", new_user_session_path, class: "sign-btn" %>
+      <%= link_to "Sign Up", new_user_registration_path, class: "sign-btn" %>
+    <% end %>
+  </div>
+</div>

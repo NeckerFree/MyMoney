@@ -1,0 +1,10 @@
+<div class="trading-container">
+   <%if (@tradings.any?)%>
+        <% @tradings.each do |trading| %>
+            <%= render partial: "shared/trading_item", locals: { trading: trading } %>
+        <% end %>        
+    <% else %>
+        <h5>trading records not found!</h5>
+    <% end %>
+    <%= link_to "New Trading", new_trading_path %>
+</div>
