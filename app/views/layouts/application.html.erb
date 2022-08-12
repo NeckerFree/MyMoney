@@ -17,6 +17,9 @@
     <div class="container ">
       <div class="center-container">
        <div class="form-container">
+        <div class="row-header">
+          <%= button_to  "<", root_path, class: "btn btn-info", method: :get %>
+        </div>
           <%= yield %>
           <p class="notice"><%= notice %></p>
           <p class="alert"><%= alert %></p>
