@@ -1,15 +1,21 @@
-<%= form_with(model: Trading.new) do |form| %>
-
-  <div class="field">
-    <%= form.text_field :name, value: @group.name, placeholder: "Name", required: true, class: "form_field" %>
+<div class="new-trading">
+  <div class="category-center">
+      <h3>Category: <%= @category.name %> </h3>
   </div>
+  <%= form_with(model: Trading.new, url: { action: "create" } , method: :post,) do |f| %>
+     <%=f.hidden_field :category_id, :value => "#{@category.id}", readonly: true%>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, autocomplete: "name", required: true %>
+    </div>
 
-  <div class="select_icon">
-    <%= form.label :icon, 'Select Icon:', class: "select_icon_label" %>
-    <%= form.select :icon, , value: @group.icon, required: true, class: "select_icon_menu" %>
-  </div>
-
+    <div class="field">
+      <%= f.label :amount %><br />
+      <%# <%= form.select :amount, , value: @group.icon, required: true, class: "select_icon_menu" %>
+      <%= f.text_field :amount, autocomplete: "amount", required: true %>
+    </div>
   <div class="actions">
-    <%= form.submit "Save", class: "app_button green_button" %>
-  </div>
-<% end %>
+      <%= f.submit "Save", class: "btn btn-info" %>
+    </div>
+  <% end %>
+</div>

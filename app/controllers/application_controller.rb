@@ -1,5 +1,4 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
   # attr_reader :current_user
   # protect_from_forgery with: :exception
   # include SessionsHelper
@@ -28,7 +27,7 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name])
   end
 
-  def after_sign_up_path_for(_resource_or_scope)
-    new_user_session
+  def after_sign_in_path_for(resource)
+    stored_location_for(resource) || categories_path
   end
 end
