@@ -1,15 +1,14 @@
 @import url("https://use.typekit.net/zli5euh.css");
 
-* {
-  --app_color_dark_blue: #1a4675;
-  --app_color_ligth_blue: #3678c2;
-  --app_color_gray: #f1f3f2;
-}
+*{
+   --app_color_dark_blue: #1a4675;
+   --app_color_ligth_blue:  #3678c2;
+   --app_color_gray: #f1f3f2;
+ }
 
-body {
-  background-color: var(--app_color_ligth_blue);
+body { 
+  background-color: var(--app_color_ligth_blue); 
 }
-
 .trading-container,
 .category-container {
   display: flex;
@@ -61,23 +60,23 @@ font-style: normal; */
 
 .center-container {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid black;
+  margin-left: auto ;
+  margin-right: auto ;
+  border: 1px solid black ;
   margin-top: 30px;
   background-color: white;
 }
 
 .form-container {
-  align-items: flex-start;
-  background-color: var(--app_color_gray);
-}
+  align-items:flex-start;
+  background-color: var(--app_color_gray) 
 
-.new-category {
+}
+.new-category{
   margin-top: 15px;
   margin-left: 20px;
   margin-right: 20px;
-  padding: 20px 0;
+  padding: 20px 0px; 
 }
 
 .category-item {
@@ -87,7 +86,7 @@ font-style: normal; */
   margin-top: 15px;
   margin-left: 20px;
   margin-right: 20px;
-  padding: 15px 0;
+  padding: 15px 0px;
 }
 
 .trading-item {
@@ -97,7 +96,7 @@ font-style: normal; */
   margin-top: 15px;
   margin-left: 20px;
   margin-right: 20px;
-  padding: 15px 0;
+  padding: 15px 0px;
 }
 
 .category-item-trading {
@@ -107,45 +106,41 @@ font-style: normal; */
   margin-top: 30px;
   margin-left: 20px;
   margin-right: 20px;
-  padding: 15px 0;
+  padding: 15px 0px;
 }
-
-.splash {
-  margin-top: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+.splash{
+margin-top: 30px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+align-items: center;
 }
-
-.image-category {
-  width: 20%;
+.image-category{
+   width: 20%; 
 }
-
-.splash_buttons {
+.splash_buttons{
   display: flex;
 }
 
-form button {
+form button{
   margin: 20px;
 }
 
-.images-container {
+.images-container{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 30px 0;
+  margin: 30px 0px;
 }
-
-.image-select {
+.image-select{
   display: flex;
   flex-direction: column;
 }
 
-.actions {
+.actions{
   margin-top: 20px;
 }
 
-.notice {
-  margin-top: 20px;
+.notice{
+  margin-top: 30px;
 }
