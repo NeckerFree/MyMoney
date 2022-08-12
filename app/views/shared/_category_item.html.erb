@@ -1,13 +1,16 @@
 <div class="category-item">
     <div class="category-left">
-    <img class="image-category" src="<%= image_path("/#{category.icon.split('/').last}".gsub("\\", "/").gsub("/app/assets/images","/assets")) %>" alt="icon category"/>
+    <img class="image-category-item" src="<%= image_path("#{category.icon.split('/').last}".gsub("\\", "/").gsub("app/assets/images","/assets")) %>" alt="icon category"/>
     </div>
     <div class="category-center">
-        <p><%= category.name %> </p>
+        <h3 class="category-name"><%= link_to "#{category.name}", category_tradings_path(category) %> </h3>
         <label><%=category.created_at.strftime('%d %b %Y')%> </label> 
     </div>
     <div class="category-right">
         <label><%=category.total_tradings %> </label>
+    </div>
+    <div class="delete-category">
+      <%= button_to "Delete", category, method: :delete, class: "btn btn-info" %>
     </div>
 </div>
 

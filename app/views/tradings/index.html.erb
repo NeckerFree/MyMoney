@@ -1,10 +1,22 @@
 <div class="trading-container">
-   <%if (@tradings.any?)%>
-        <% @tradings.each do |trading| %>
+    <div class="category-item-trading">
+        <div class="category-left">
+            <img class="image-category-item" src="<%= image_path("#{@category.icon.split('/').last}".gsub("\\", "/").gsub("app/assets/images","/assets")) %>" alt="icon category"/>
+        </div>
+        <div class="category-center">
+            <h3><%= @category.name %> </h3>
+        </div>
+        <div class="category-right">
+            <label><%=@category.total_tradings %> </label>
+        </div>
+    </div>
+ 
+   <%if (@category.tradings.any?)%>
+        <% @category.tradings.each do |trading| %>
             <%= render partial: "shared/trading_item", locals: { trading: trading } %>
         <% end %>        
     <% else %>
-        <h5>trading records not found!</h5>
+        <h5>Trading records not found!</h5>
     <% end %>
-    <%= link_to "New Trading", new_trading_path %>
+    <%= link_to "New transaction", new_category_trading_path(@category), class: "btn btn-primary btn-lg btn-block new-category" %>
 </div>

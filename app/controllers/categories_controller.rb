@@ -6,10 +6,12 @@ class CategoriesController < ApplicationController
   end
 
   def new
-    @images = Dir.glob('app/assets/images/Sports/*.png')
+    @images = Dir.glob('app/assets/images/Categories/*.png')
   end
 
   def create
+    puts 'Parametros new cat'
+    puts params
     @category = Category.new(category_params)
     @category.author_id = current_user.id
 
@@ -18,6 +20,7 @@ class CategoriesController < ApplicationController
     else
       flash[:error] = 'Error creating category'
     end
+    redirect_to categories_path
   end
 
   def update
@@ -29,12 +32,18 @@ class CategoriesController < ApplicationController
   end
 
   def destroy
-    # @tradings = @category.expenses
-    # @tradings.each(&:destroy)
+    puts 'Delete category'
+    puts params
+    @category = Category.find(params[:id])
     if @category.destroy
       flash[:notice] = 'category was successfully destroyed.'
     else
       flash[:error] = 'Error deleting category'
     end
+    redirect_to categories_path
+  end
+
+  def category_params
+    params.require(:category).permit(:name, :icon)
   end
 end
