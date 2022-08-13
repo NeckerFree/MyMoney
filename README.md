@@ -1,56 +1,60 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Project Name: MyMoney
 
-> Description the project.
+> This capstone project is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Ruby on Rails
+- PostgreSql
+- Boostrap
+- Rspec
+
+## Presentation Link
+
+[Presentation](https://www.loom.com/share/4d67323c26aa482da1e49be81bcbba62)
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
-
+[Live Demo Link](https://fierce-caverns-90128.herokuapp.com)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
+- Clone Repository using
+`git clone https://github.com/NeckerFree/MyMoney`
+- Move into project directory
+`cd MyMoney`
+### Setup Database 
+- Make sure that your Postgres database is installed.
+-  Open the file config\database.yml
+- Modify the connection parameters to point your Postgres      Database:
+    `username: [your_user]`
+    `password: [your_password]`
 
-### Prerequisites
+- If required drop existing database : `rake db:drop`
+- Create databases: `rake db:create`
+- Create db structure including tables : `rake db:migrate`
+- If required seed initial data (stored in db\seeds.rb file): `rails db:seed`
+### Run Tests
+- Install rspec: `bundle install`
+- Run all tests: `rspec`
+- Run all tests and show test documentation: `rspec spec --format documentation`
 
-### Setup
+### Run App
+- If required (Not for testing) run `rails server`
+- Visit http://localhost:3000/ in your browser!
 
-### Install
+## Author
 
-### Usage
+👤 **Elio Cortés**
 
-### Run tests
+- GitHub: [@NeckerFree](https://github.com/NeckerFree)
+- Twitter: [@ElioCortesM](https://twitter.com/ElioCortesM)
+- LinkedIn: [elionelsoncortes](https://www.linkedin.com/in/elionelsoncortes/)
 
-### Deployment
-
-
-
-## Authors
-
-👤 **Author1**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
 
 ## 🤝 Contributing
 
@@ -72,4 +76,3 @@ Give a ⭐️ if you like this project!
 
 This project is [MIT](./LICENSE) licensed.
 
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._

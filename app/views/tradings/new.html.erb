@@ -1,0 +1,21 @@
+<div class="new-trading">
+  <div class="category-center">
+      <h3>Category: <%= @category.name %> </h3>
+  </div>
+  <%= form_with(model: Trading.new, url: { action: "create" } , method: :post,) do |f| %>
+     <%=f.hidden_field :category_id, :value => "#{@category.id}", readonly: true%>
+    <div class="field">
+      <%= f.label :name %><br />
+      <%= f.text_field :name, autocomplete: "name", required: true %>
+    </div>
+
+    <div class="field">
+      <%= f.label :amount %><br />
+      <%# <%= form.select :amount, , value: @group.icon, required: true, class: "select_icon_menu" %>
+      <%= f.text_field :amount, autocomplete: "amount", required: true %>
+    </div>
+  <div class="actions">
+      <%= f.submit "Save", class: "btn btn-info" %>
+    </div>
+  <% end %>
+</div>

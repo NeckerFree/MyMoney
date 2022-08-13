@@ -1,0 +1,11 @@
+<div class="trading-item">
+    <div class="trading-left">
+        <p><%= trading.name %> </p>
+    </div>    
+    <div class="trading-center">
+        <label><%= trading.created_at.strftime('%d %b %Y') %> </label>
+    </div>
+    <div class="trading-right">
+        <label class="amount"><%= trading.amount %> </label>
+    </div>
+</div>
