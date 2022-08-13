@@ -10,7 +10,7 @@
     <%= button_to "Sign Out", destroy_user_session_path, class: "btn btn-primary", method: :delete %>
     <% else %>
       <%= button_to "Sign In", new_user_session_path, class: "btn btn-info" %>
-      <%= button_to "Sign Up", new_user_registration_path, class: "btn btn-info" %>
+      <%= button_to "Sign Up", new_user_registration_path, class: "btn btn-info", method: :get %>
     <% end %>
   </div>
 </div>
