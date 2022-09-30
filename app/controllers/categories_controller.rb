@@ -6,7 +6,8 @@ class CategoriesController < ApplicationController
   end
 
   def new
-    @images = Dir.glob('app/assets/images/Categories/*.png')
+    # @images = Dir.glob('app/assets/images/Categories/*.png')
+    @images= Dir.glob("#{Rails.root}/app/assets/images/Categories/*.png") 
   end
 
   def create
